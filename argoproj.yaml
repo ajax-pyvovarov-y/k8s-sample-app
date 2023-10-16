@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: sample-app
+spec:
+  destination:
+    name: ''
+    namespace: argo-sample
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: helm-charts/sample
+    repoURL: 'git@github.com:ajax-pyvovarov-y/k8s-sample-app.git'
+    targetRevision: argo
+    helm:
+      valueFiles:
+        - values.yaml
+  sources: []
+  project: default
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: false
+    syncOptions:
+      - CreateNamespace=true
