@@ -7,4 +7,6 @@ flux create secret git sample-app --url="ssh://git@github.com/ajax-pyvovarov-y/k
 ```shell
 cd ~/repos/flux-cd-test/fluxcd/apps/sample-app
 kubectl apply -n flux-system -f repo.yaml
+kubectl apply -n flux-system -f helm.yaml
 ```
+OR just commit those files into flux repo
