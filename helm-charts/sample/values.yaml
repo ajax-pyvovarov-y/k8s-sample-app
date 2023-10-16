@@ -8,7 +8,7 @@ image:
   repository: ajaxpyvovarovy/k8s-sample-app
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
+  tag: "0.0.2"
 
 imagePullSecrets: []
 nameOverride: "k8s-sample-app"
