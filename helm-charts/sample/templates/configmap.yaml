@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: filetxt
 data:
-  file.txt: "test argo"
+  file.txt: "test argo 1"
